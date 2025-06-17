@@ -12,7 +12,7 @@ export const Hero = () => {
             </span>
           </h1>
           <p className="text-lg text-gray-600 mb-8">
-            ISTQB® certified Experienced senior software QA engineer with 4+ years in diverse domains.
+            ISTQB® certified experienced senior software QA engineer with 4+ years in diverse domains.
             Passionate about delivering high-quality products and seeking opportunities to drive innovation and
             enhance software quality in dynamic environments.
           </p>
