@@ -6,18 +6,16 @@ export const Header = () => {
   const menuItems = ["About", "Skills", "Experience", "Contact"];
 
   const scrollToTop = () => {
-    // Scroll to top smoothly
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
-    
-    // Clear the hash from URL after scroll completes
+   
     setTimeout(() => {
       window.history.pushState("", document.title, window.location.pathname + window.location.search);
-    }, 500); // Match this delay with your scroll duration
+    }, 500); 
     
-    setIsMenuOpen(false); // Close mobile menu if open
+    setIsMenuOpen(false);
   };
 
   return (

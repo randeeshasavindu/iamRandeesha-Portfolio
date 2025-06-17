@@ -6,7 +6,7 @@ export const Contact = () => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget;  // Changed from e.target to e.currentTarget
+    const form = e.currentTarget;
     const data = new FormData(form);
     
     try {

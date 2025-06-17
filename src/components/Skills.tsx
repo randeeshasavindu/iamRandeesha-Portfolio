@@ -7,8 +7,7 @@ export const Skills = () => {
     items: ["Manual Testing", "Automated Testing", "API Testing", "Performance Testing", "Mobile App Testing", "Test Strategy & Release Management"]
   }, {
     category: "Tools",
-    items: ["Selenium", "Cypress", "Appium", "Playwright", "RestAssured", "Postman", "LoadRunner", "JMeter", "JIRA", "Jenkins","MongoDB","Azure DevOps","GitHub","BitBucket"
-    ]
+    items: ["Selenium", "Cypress", "Appium", "Playwright", "RestAssured", "Postman", "LoadRunner", "JMeter", "JIRA", "Jenkins","MongoDB","Azure DevOps","GitHub","BitBucket"]
   }, {
     category: "Programming",
     items: ["JavaScript","TypeScript","JAVA", "Python", "SQL", "HTML/CSS"]
@@ -26,7 +25,6 @@ export const Skills = () => {
               <h3 className="text-xl font-semibold mb-4">{skill.category}</h3>
               
               {skill.category === "Tools" ? (
-                // Two-column layout for Tools
                 <div className="grid grid-cols-2 gap-x-4 gap-y-2">
                   {skill.items.map(item => (
                     <div key={item} className="flex items-center">
@@ -36,7 +34,6 @@ export const Skills = () => {
                   ))}
                 </div>
               ) : (
-                // Single column layout for other categories
                 <ul className="space-y-2">
                   {skill.items.map(item => (
                     <li key={item} className="flex items-center">

@@ -4,7 +4,7 @@ import { Hero } from "./components/Hero";
 import { Skills } from "./components/Skills";
 import { Experience } from "./components/Experience";
 import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer"; // Add this import
+import { Footer } from "./components/Footer";
 
 export function App() {
   return (
@@ -16,7 +16,7 @@ export function App() {
         <Experience />
         <Contact />
       </main>
-      <Footer /> {/* Add the Footer here */}
+      <Footer /> {}
     </div>
   );
 }
