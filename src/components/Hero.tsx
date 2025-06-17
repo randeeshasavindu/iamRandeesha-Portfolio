@@ -39,7 +39,7 @@ export const Hero = () => {
         </div>
         <div className="relative">
           <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden mx-auto">
-            <img src="public\RandeeshaQA.jpg" alt="Randeesha QA" className="w-full h-full object-cover" />
+            <img src="https://iam-randeesha-portfolio.vercel.app/RandeeshaQA.jpg" alt="Randeesha QA" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
