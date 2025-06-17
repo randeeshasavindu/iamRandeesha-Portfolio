@@ -6,10 +6,17 @@ export const Header = () => {
   const menuItems = ["About", "Skills", "Experience", "Contact"];
 
   const scrollToTop = () => {
+    // Scroll to top smoothly
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
+    
+    // Clear the hash from URL after scroll completes
+    setTimeout(() => {
+      window.history.pushState("", document.title, window.location.pathname + window.location.search);
+    }, 500); // Match this delay with your scroll duration
+    
     setIsMenuOpen(false); // Close mobile menu if open
   };
 
@@ -19,7 +26,7 @@ export const Header = () => {
         <div className="flex justify-between items-center py-4">
           <button
             onClick={scrollToTop}
-            className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent hover:from-purple-700 hover:to-blue-600 transition-all"
+            className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent hover:from-purple-700 hover:to-blue-600 transition-all focus:outline-none"
           >
             iamRandeesha
           </button>
@@ -31,6 +38,7 @@ export const Header = () => {
                   <a
                     href={`#${item.toLowerCase()}`}
                     className="text-gray-600 hover:text-purple-600 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item}
                   </a>
@@ -40,7 +48,7 @@ export const Header = () => {
           </nav>
           
           <button
-            className="md:hidden text-gray-600 hover:text-purple-600"
+            className="md:hidden text-gray-600 hover:text-purple-600 focus:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -67,7 +75,7 @@ export const Header = () => {
               <li>
                 <button
                   onClick={scrollToTop}
-                  className="block py-2 text-gray-600 hover:text-purple-600 transition-colors w-full text-left"
+                  className="block py-2 text-gray-600 hover:text-purple-600 transition-colors w-full text-left focus:outline-none"
                 >
                   Back to Top
                 </button>
