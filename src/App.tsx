@@ -4,14 +4,19 @@ import { Hero } from "./components/Hero";
 import { Skills } from "./components/Skills";
 import { Experience } from "./components/Experience";
 import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer"; // Add this import
+
 export function App() {
-  return <div className="w-full min-h-screen">
+  return (
+    <div className="w-full min-h-screen flex flex-col">
       <Header />
-      <main>
+      <main className="flex-grow">
         <Hero />
         <Skills />
         <Experience />
         <Contact />
       </main>
-    </div>;
+      <Footer /> {/* Add the Footer here */}
+    </div>
+  );
 }
