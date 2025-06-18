@@ -102,7 +102,7 @@ export const Footer = () => {
         {/* Attribution */}
         <div className="mt-12 pt-6 border-t border-gray-200 dark:border-gray-700 text-center">
           <p className="text-xs text-gray-500 dark:text-gray-400">
-            Built with ❤️, by Randeesha
+            Built with ❤️ by Randeesha
           </p>
         </div>
       </div>
