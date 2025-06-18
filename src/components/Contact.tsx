@@ -38,6 +38,12 @@ export const Contact = () => {
     }
   };
 
+  const openGoogleMaps = () => {
+    const address = "Beach Road, Dehiwala, Mount Lavinia, Sri Lanka";
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+    window.open(mapsUrl, '_blank');
+  };
+
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,21 +54,36 @@ export const Contact = () => {
               <Mail className="text-purple-600 mr-4" />
               <div>
                 <h3 className="font-semibold">Email</h3>
-                <p className="text-gray-600">randeesha1997@gmail.com</p>
+                <a 
+                  href="mailto:randeesha1997@gmail.com" 
+                  className="text-gray-600 hover:text-purple-600 transition-colors"
+                >
+                  randeesha1997@gmail.com
+                </a>
               </div>
             </div>
             <div className="flex items-center">
               <Phone className="text-purple-600 mr-4" />
               <div>
                 <h3 className="font-semibold">Phone</h3>
-                <p className="text-gray-600">+94-76-630-7608</p>
+                <a 
+                  href="tel:+94766307608" 
+                  className="text-gray-600 hover:text-purple-600 transition-colors"
+                >
+                  +94-76-630-7608
+                </a>
               </div>
             </div>
             <div className="flex items-center">
               <MapPin className="text-purple-600 mr-4" />
               <div>
                 <h3 className="font-semibold">Location</h3>
-                <p className="text-gray-600">Beach Road, Dehiwala, Mount Lavinia, Sri Lanka</p>
+                <button 
+                  onClick={openGoogleMaps}
+                  className="text-gray-600 hover:text-purple-600 transition-colors text-left"
+                >
+                  Beach Road, Dehiwala, Mount Lavinia, Sri Lanka
+                </button>
               </div>
             </div>
           </div>

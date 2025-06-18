@@ -35,10 +35,10 @@ export const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Quick Links</h3>
             <ul className="space-y-2">
-              {['About', 'Skills', 'Experience', 'Contact'].map((item) => (
+              {['About', 'Skills', 'Experience', 'Team Collaboration', 'Contact'].map((item) => (
                 <li key={item}>
                   <a
-                    href={`#${item.toLowerCase()}`}
+                    href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
                     className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                   >
                     {item}
@@ -107,7 +107,15 @@ export const Footer = () => {
         {/* Attribution */}
         <div className="mt-12 pt-6 border-t border-gray-200 dark:border-gray-700 text-center">
           <p className="text-xs text-gray-500 dark:text-gray-400">
-            Built with ❤️ by Randeesha
+            Built with ❤️ by{' '}
+            <a 
+              href="https://linkedin.com/in/randeesha" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+            >
+              Randeesha
+            </a>
           </p>
         </div>
       </div>
