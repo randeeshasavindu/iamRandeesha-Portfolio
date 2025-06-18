@@ -1,8 +1,17 @@
-import React, { useState, FormEvent } from "react";
+import React, { useState, FormEvent, useEffect } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 export const Contact = () => {
   const [status, setStatus] = useState("");
+
+  useEffect(() => {
+    if (status === "SUCCESS") {
+      const timer = setTimeout(() => {
+        setStatus("");
+      }, 7000);
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -89,7 +98,7 @@ export const Contact = () => {
               Send Message
             </button>
             {status === "SUCCESS" && (
-              <div className="p-3 bg-green-100 text-green-700 rounded">
+              <div className="p-3 bg-green-100 text-green-700 rounded transition-opacity duration-300">
                 Thanks for your message! I'll get back to you soon.
               </div>
             )}
