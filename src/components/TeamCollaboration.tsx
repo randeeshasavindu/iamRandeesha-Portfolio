@@ -9,25 +9,25 @@ export const TeamCollaboration = () => {
   const teamImages = [
    {
       id: 1,
-      src: "public/TeamImage01.jpg",
+      src: "https://iam-randeesha-portfolio.vercel.app/TeamImage01.jpg",
       alt: "Team Meeting",
       description: "Leading daily standup with QA team members"
     },
     {
       id: 2,
-      src: "public/TeamImage03.jpg",
+      src: "https://iam-randeesha-portfolio.vercel.app/TeamImage03.jpg",
       alt: "Code Review",
       description: "Pair programming with junior developers"
     },
     {
       id: 3,
-      src: "public/TeamImage04.jpg",
+      src: "https://iam-randeesha-portfolio.vercel.app/TeamImage04.jpg",
       alt: "Retrospective",
       description: "Conducting sprint retrospective session"
     },
     {
       id: 4,
-      src: "public/TeamImage02.jpg",
+      src: "https://iam-randeesha-portfolio.vercel.app/TeamImage02.jpg",
       alt: "Workshop",
       description: "Running test automation workshop"
     }
