@@ -24,7 +24,7 @@ export const Footer = () => {
               iamRandeesha
             </button>
             <p className="text-gray-600 dark:text-gray-300">
-              Senior QA Engineer with passion for quality and innovation
+              A Senior QA Engineer with passion for quality and innovation
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400">
               © {currentYear} All Rights Reserved
@@ -53,7 +53,7 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Connect With Me</h3>
             <div className="flex space-x-4">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/randeeshasavindu"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white dark:bg-gray-700 rounded-full shadow-sm hover:shadow-md transition-all text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400"
@@ -62,7 +62,18 @@ export const Footer = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/yourprofile"
+                href="https://medium.com/@randeesha1997"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-white dark:bg-gray-700 rounded-full shadow-sm hover:shadow-md transition-all text-gray-700 dark:text-gray-200 hover:text-gray-800 dark:hover:text-gray-100"
+                aria-label="Medium"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+                </svg>
+              </a>
+              <a
+                href="https://linkedin.com/in/randeesha"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white dark:bg-gray-700 rounded-full shadow-sm hover:shadow-md transition-all text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
