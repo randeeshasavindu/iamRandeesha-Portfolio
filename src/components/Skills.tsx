@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
 export const Skills = () => {
-  const [activeTab, setActiveTab] = useState("All");
+  const [activeTab, setActiveTab] = useState("Testing Fundamentals");
   
   const skillCategories = [
-    "All",
     "Testing Fundamentals",
     "Automation Testing",
     "Programming Languages",
@@ -61,9 +60,7 @@ export const Skills = () => {
     { name: "Hospitality", percentage: 85, category: "Domain Knowledge" }
   ];
 
-  const filteredSkills = activeTab === "All" 
-    ? skills 
-    : skills.filter(skill => skill.category === activeTab);
+  const filteredSkills = skills.filter(skill => skill.category === activeTab);
 
   return (
     <section id="skills" className="py-20 bg-white">

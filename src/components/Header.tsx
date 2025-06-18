@@ -7,7 +7,7 @@ export const Header = () => {
   const [activeSection, setActiveSection] = useState("");
   const [isAtTop, setIsAtTop] = useState(true);
 
-  const menuItems = ["About", "Skills", "Experience", "Contact"];
+  const menuItems = ["About", "Skills", "Experience", "Team Collaboration", "Contact"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,7 +16,9 @@ export const Header = () => {
       setIsAtTop(scrollY < 50); // Adjust this value based on your hero section height
 
       // Determine active section based on scroll position
-      const sections = menuItems.map(item => document.getElementById(item.toLowerCase()));
+      const sections = menuItems.map(item => 
+        document.getElementById(item.toLowerCase().replace(/\s+/g, '-'))
+      );
       sections.forEach(section => {
         if (section) {
           const rect = section.getBoundingClientRect();
@@ -63,12 +65,12 @@ export const Header = () => {
               {menuItems.map((item) => (
                 <li key={item}>
                   <a
-                    href={`#${item.toLowerCase()}`}
-                    className={`relative px-2 py-1 text-sm font-medium transition-colors ${activeSection === item.toLowerCase() ? 'text-purple-600' : 'text-gray-600 hover:text-purple-600'}`}
+                    href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                    className={`relative px-2 py-1 text-sm font-medium transition-colors ${activeSection === item.toLowerCase().replace(/\s+/g, '-') ? 'text-purple-600' : 'text-gray-600 hover:text-purple-600'}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item}
-                    {activeSection === item.toLowerCase() && (
+                    {activeSection === item.toLowerCase().replace(/\s+/g, '-') && (
                       <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></span>
                     )}
                   </a>
@@ -106,8 +108,8 @@ export const Header = () => {
               {menuItems.map((item) => (
                 <li key={item}>
                   <a
-                    href={`#${item.toLowerCase()}`}
-                    className={`block py-3 px-4 rounded-lg transition-all ${activeSection === item.toLowerCase() 
+                    href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                    className={`block py-3 px-4 rounded-lg transition-all ${activeSection === item.toLowerCase().replace(/\s+/g, '-') 
                       ? 'bg-gradient-to-r from-purple-50 to-blue-50 text-purple-600 font-medium' 
                       : 'text-gray-600 hover:bg-gray-50'}`}
                     onClick={() => setIsMenuOpen(false)}

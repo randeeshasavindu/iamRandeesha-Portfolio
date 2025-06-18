@@ -5,6 +5,7 @@ import { Skills } from "./components/Skills";
 import { Experience } from "./components/Experience";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { TeamCollaboration } from "./components/TeamCollaboration";
 
 export function App() {
   return (
@@ -14,6 +15,7 @@ export function App() {
         <Hero />
         <Skills />
         <Experience />
+        <TeamCollaboration />
         <Contact />
       </main>
       <Footer /> {}
