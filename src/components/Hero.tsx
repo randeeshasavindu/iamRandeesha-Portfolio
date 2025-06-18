@@ -147,7 +147,7 @@ export const Hero = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Hi, I'm Randeesha
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
-                Senior QA Engineer
+                A Senior QA Engineer
               </span>
             </h1>
             <p className="text-lg text-gray-300 mb-8">
